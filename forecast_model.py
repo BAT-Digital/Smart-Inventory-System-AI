@@ -57,4 +57,4 @@ def generate_text_summary(top_5):
         summary += f"{i}. Продукт ID: {item['product_id']}, ожидаемый объем: {round(item['forecast_sum'], 2)}\n"
         for day in item['top_days']:
             summary += f"   📅 Пик: {day['ds'].strftime('%Y-%m-%d')} — {round(day['yhat'], 2)} продаж\n"
-    return summar
+    return summary

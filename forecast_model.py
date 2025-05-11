@@ -51,6 +51,8 @@ def forecast_top_products(csv_path, days_to_forecast=30):
         'text_summary': analysis_text
     }
 
+
+
 def generate_text_summary(top_5):
     summary = "Прогнозируемые ТОП-5 продуктов по объёму продаж на следующие дни:\n\n"
     for i, item in enumerate(top_5, 1):

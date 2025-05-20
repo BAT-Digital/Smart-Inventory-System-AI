@@ -44,12 +44,3 @@ def forecast_top_products(csv_path, days_to_forecast=30):
     return json.dumps({
         'top_products': top_5
     }, indent=2)
-
-
-
-def generate_text_summary(top_5):
-    summary = "Прогнозируемые ТОП-5 продуктов по объёму продаж на следующие дни:\n\n"
-    for i, item in enumerate(top_5, 1):
-        summary += f"{i}. Продукт ID: {item['product_id']}, ожидаемый объем: {round(item['forecasted_sales'], 2)}\n"
-        summary += f"   📅 Пик: {item['peak_day']} — {round(item['peak_value'], 2)} продаж\n"
-    return summary
